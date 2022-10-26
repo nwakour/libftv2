@@ -1,6 +1,6 @@
 BINARY=bin.a
 TESTBINARY=bin.test
-CODEDIRS=. ./libft ./string
+CODEDIRS=. ./libft ./string ./vector
 INCDIRS=. # can be list
 CC=gcc
 OPT=
@@ -35,7 +35,7 @@ fclean: clean
 re: fclean all
 
 test: all
-	g++ test.cpp bin.a -lgtest -lgtest_main -pthread -o $(TESTBINARY)
+	g++ -g -fsanitize=address test.cpp bin.a -lgtest -lgtest_main -pthread -o $(TESTBINARY)
 	./$(TESTBINARY)
 # @ silences the printing of the command
 # $(info ...) prints output
