@@ -1,6 +1,6 @@
 BINARY=bin.a
 TESTBINARY=bin.test
-CODEDIRS=. ./libft ./string ./vector
+CODEDIRS=. ./libft ./string ./vector ./set
 INCDIRS=. # can be list
 CC=gcc
 OPT=

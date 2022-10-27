@@ -3,6 +3,7 @@
 extern "C" {
 	#include "string/ft_string.h"
 	#include "vector/ft_vector.h"
+	#include "set/ft_set.h"
 }
 
 // TEST(vector, vectorInit)
@@ -702,6 +703,271 @@ extern "C" {
 // 	ASSERT_TRUE(vectorCapacity(&vector) == 0);
 // 	ASSERT_TRUE(vectorBegin(&vector) == NULL);
 // }
+// int lesserInt(void *a, void *b)
+// {
+// 	return (*(int*)a < *(int*)b);
+// }
+
+// TEST(set, setInit)
+// {
+// 	t_set set = setInit(sizeof(int), lesserInt, 0);
+// 	ASSERT_TRUE(setSize(&set) == 0);
+// 	ASSERT_TRUE(setBegin(&set) == setEnd(&set));
+// 	setClear(&set);
+// 	ASSERT_TRUE(setSize(&set) == 0);
+// 	ASSERT_TRUE(setBegin(&set) == setEnd(&set));
+// 	setFree(&set);
+// }
+
+// TEST(set, setInsert)
+// {
+// 	t_set set = setInit(sizeof(int), lesserInt, 0);
+// 	int a = 1;
+// 	int b = 2;
+// 	int c = 3;
+// 	int d = 4;
+// 	int e = 5;
+// 	int f = 6;
+// 	int g = 7;
+// 	int h = 8;
+// 	int i = 9;
+// 	int j = 10;
+// 	int k = 11;
+// 	int l = 12;
+// 	int m = 13;
+// 	int n = 14;
+// 	int o = 15;
+// 	int p = 16;
+// 	int q = 17;
+// 	int r = 18;
+// 	int s = 19;
+// 	int t = 20;
+// 	int u = 21;
+// 	int v = 22;
+// 	int w = 23;
+// 	int x = 24;
+// 	int y = 25;
+// 	int z = 26;
+// 	setInsert(&set, &a);
+// 	setInsert(&set, &b);
+// 	setInsert(&set, &c);
+// 	setInsert(&set, &d);
+// 	setInsert(&set, &e);
+// 	setInsert(&set, &f);
+// 	setInsert(&set, &g);
+// 	setInsert(&set, &h);
+// 	setInsert(&set, &i);
+// 	setInsert(&set, &j);
+// 	setInsert(&set, &k);
+// 	setInsert(&set, &l);
+// 	setInsert(&set, &m);
+// 	setInsert(&set, &n);
+// 	setInsert(&set, &o);
+// 	setInsert(&set, &p);
+// 	setInsert(&set, &q);
+// 	setInsert(&set, &r);
+// 	setInsert(&set, &s);
+// 	setInsert(&set, &t);
+// 	setInsert(&set, &u);
+// 	setInsert(&set, &v);
+// 	setInsert(&set, &w);
+// 	setInsert(&set, &x);
+// 	setInsert(&set, &y);
+// 	setInsert(&set, &z);
+// 	ASSERT_TRUE(setSize(&set) == 26);
+// 	ASSERT_TRUE(setBegin(&set) != setEnd(&set));
+// 	setClear(&set);
+// 	ASSERT_TRUE(setSize(&set) == 0);
+// 	ASSERT_TRUE(setBegin(&set) == setEnd(&set));
+// 	setFree(&set);
+// }
+
+// TEST(set, setErase)
+// {
+// 	t_set set = setInit(sizeof(int), lesserInt, 0);
+// 	int a = 1;
+// 	int b = 2;
+// 	int c = 3;
+// 	int d = 4;
+// 	int e = 5;
+// 	int f = 6;
+// 	int g = 7;
+// 	int h = 8;
+// 	int i = 9;
+// 	int j = 10;
+// 	int k = 11;
+// 	int l = 12;
+// 	int m = 13;
+// 	int n = 14;
+// 	int o = 15;
+// 	int p = 16;
+// 	int q = 17;
+// 	int r = 18;
+// 	int s = 19;
+// 	int t = 20;
+// 	int u = 21;
+// 	int v = 22;
+// 	int w = 23;
+// 	int x = 24;
+// 	int y = 25;
+// 	int z = 26;
+// 	setInsert(&set, &a);
+// 	setInsert(&set, &b);
+// 	setInsert(&set, &c);
+// 	setInsert(&set, &d);
+// 	setInsert(&set, &e);
+// 	setInsert(&set, &f);
+// 	setInsert(&set, &g);
+// 	setInsert(&set, &h);
+// 	setInsert(&set, &i);
+// 	setInsert(&set, &j);
+// 	setInsert(&set, &k);
+// 	setInsert(&set, &l);
+// 	setInsert(&set, &m);
+// 	setInsert(&set, &n);
+// 	setInsert(&set, &o);
+// 	setInsert(&set, &p);
+// 	setInsert(&set, &q);
+// 	setInsert(&set, &r);
+// 	setInsert(&set, &s);
+// 	setInsert(&set, &t);
+// 	setInsert(&set, &u);
+// 	setInsert(&set, &v);
+// 	setInsert(&set, &w);
+// 	setInsert(&set, &x);
+// 	setInsert(&set, &y);
+// 	setInsert(&set, &z);
+// 	ASSERT_TRUE(setSize(&set) == 26);
+// 	ASSERT_TRUE(setBegin(&set) != setEnd(&set));
+// 	setErase(&set, &a);
+// 	setErase(&set, &b);
+// 	setErase(&set, &c);
+// 	setErase(&set, &d);
+// 	setErase(&set, &e);
+// 	setErase(&set, &f);
+// 	setErase(&set, &g);
+// 	setErase(&set, &h);
+// 	setErase(&set, &i);
+// 	setErase(&set, &j);
+// 	setErase(&set, &k);
+// 	setErase(&set, &l);
+// 	setErase(&set, &m);
+// 	setErase(&set, &n);
+// 	setErase(&set, &o);
+// 	setErase(&set, &p);
+// 	setErase(&set, &q);
+// 	setErase(&set, &r);
+// 	setErase(&set, &s);
+// 	setErase(&set, &t);
+// 	setErase(&set, &u);
+// 	setErase(&set, &v);
+// 	setErase(&set, &w);
+// 	setErase(&set, &x);
+// 	setErase(&set, &y);
+// 	setErase(&set, &z);
+// 	ASSERT_TRUE(setSize(&set) == 0);
+// 	ASSERT_TRUE(setBegin(&set) == setEnd(&set));
+// 	setFree(&set);
+// }
+
+// TEST(set, setIterators)
+// {
+// 	t_set set = setInit(sizeof(int), lesserInt, 0);
+// 	int a = 1;
+// 	int b = 2;
+// 	int c = 3;
+// 	int d = 4;
+// 	int e = 5;
+// 	int f = 6;
+// 	int g = 7;
+// 	int h = 8;
+// 	int i = 9;
+// 	int j = 10;
+// 	int k = 11;
+// 	int l = 12;
+// 	int m = 13;
+// 	int n = 14;
+// 	int o = 15;
+// 	int p = 16;
+// 	int q = 17;
+// 	int r = 18;
+// 	int s = 19;
+// 	int t = 20;
+// 	int u = 21;
+// 	int v = 22;
+// 	int w = 23;
+// 	int x = 24;
+// 	int y = 25;
+// 	int z = 26;
+// 	setInsert(&set, &a);
+// 	setInsert(&set, &b);
+// 	setInsert(&set, &c);
+// 	setInsert(&set, &d);
+// 	setInsert(&set, &e);
+// 	setInsert(&set, &f);
+// 	setInsert(&set, &g);
+// 	setInsert(&set, &h);
+// 	setInsert(&set, &i);
+// 	setInsert(&set, &j);
+// 	setInsert(&set, &k);
+// 	setInsert(&set, &l);
+// 	setInsert(&set, &m);
+// 	setInsert(&set, &n);
+// 	setInsert(&set, &o);
+// 	setInsert(&set, &p);
+// 	setInsert(&set, &q);
+// 	setInsert(&set, &r);
+// 	setInsert(&set, &s);
+// 	setInsert(&set, &t);
+// 	setInsert(&set, &u);
+// 	setInsert(&set, &v);
+// 	setInsert(&set, &w);
+// 	setInsert(&set, &x);
+// 	setInsert(&set, &y);
+// 	setInsert(&set, &z);
+// 	ASSERT_TRUE(setSize(&set) == 26);
+// 	ASSERT_TRUE(setBegin(&set) != setEnd(&set));
+// 	ASSERT_TRUE(*(int*)setBegin(&set)->_val == 1);
+// 	setIterator it = setBegin(&set);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 2);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 3);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 4);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 5);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 6);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 7);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 8);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 9);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 10);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 11);
+// 	it = setNext(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 12);
+// 	it = setPrev(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 11);
+// 	it = setPrev(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 10);
+// 	it = setPrev(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 9);
+// 	it = setPrev(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 8);
+// 	it = setPrev(&set, it);
+// 	ASSERT_TRUE(*(int*)it->_val == 7);
+// 	setClear(&set);
+// 	ASSERT_TRUE(setSize(&set) == 0);
+// 	ASSERT_TRUE(setBegin(&set) == setEnd(&set));
+// 	setFree(&set);
+// }
+
+
 int main(int argc, char **argv)
 {
 	testing::InitGoogleTest(&argc, argv);
